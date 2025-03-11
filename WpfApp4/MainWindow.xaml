@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
-        Title="Dodaj Pracownika" Height="450" Width="800" Background="Gray">
+        Title="Dodaj Pracownika" Height="450" Width="800" Background="LightSteelBlue">
     <Grid>
         <GroupBox Header="Dane pracownika" Margin="10,37,442,113">
             <Grid>
@@ -25,14 +25,14 @@
 
         <GroupBox HorizontalAlignment="Left" Height="283" Header="Generowanie hasła" Margin="450,38,0,0" VerticalAlignment="Top" Width="340">
             <Grid>
-                <TextBox HorizontalAlignment="Left" Margin="110,10,0,205" TextWrapping="Wrap" Width="216"/>
+                <TextBox Name="TB_znaki" HorizontalAlignment="Left" Margin="110,10,0,205" TextWrapping="Wrap" Width="216" Text="Tyle ile wypisane &quot;#&quot; tyle wygeneruje znaków"/>
                 <Label Content="Ile snaków?" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Height="33" Width="78"/>
-                <CheckBox Content="Małe i wielkie litery" HorizontalAlignment="Left" Height="21" Margin="10,79,0,0" VerticalAlignment="Top" Width="208"/>
-                <CheckBox Content="Cyfry" HorizontalAlignment="Left" Height="21" Margin="10,105,0,0" VerticalAlignment="Top" Width="208"/>
-                <CheckBox Content="Znaki specjalne" HorizontalAlignment="Left" Height="21" Margin="10,131,0,0" VerticalAlignment="Top" Width="208"/>
-                <Button Content="Generuj Hasło" HorizontalAlignment="Center" Height="43" Margin="0,207,0,0" VerticalAlignment="Top" Width="130" FontSize="18"/>
+                <CheckBox Name="CB_litery" Content="Małe i wielkie litery" HorizontalAlignment="Left" Height="21" Margin="10,79,0,0" VerticalAlignment="Top" Width="208" IsChecked="True"/>
+                <CheckBox Name="CB_cyfry" Content="Cyfry" HorizontalAlignment="Left" Height="21" Margin="10,105,0,0" VerticalAlignment="Top" Width="208"/>
+                <CheckBox Name="CB_specjalnyJestes" Content="Znaki specjalne" HorizontalAlignment="Left" Height="21" Margin="10,131,0,0" VerticalAlignment="Top" Width="208"/>
+                <Button Name="B_ginner" Content="Generuj Hasło" HorizontalAlignment="Center" Height="43" Margin="0,207,0,0" VerticalAlignment="Top" Width="130" FontSize="18" Background="#FF4683B4" Foreground="White" Click="B_ginner_Click"/>
             </Grid>
         </GroupBox>
-        <Button Content="Zatwierdź" HorizontalAlignment="Center" Height="47" Margin="0,358,0,0" VerticalAlignment="Top" Width="232" FontSize="24"/>
+        <Button Content="Zatwierdź" HorizontalAlignment="Center" Height="47" Margin="0,358,0,0" VerticalAlignment="Top" Width="232" FontSize="24" Background="#FF4683B4"  Foreground="White"/>
     </Grid>
 </Window>
